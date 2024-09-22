@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to BookHive - Your University Resource Hub</title>
+    <style>
+        :root {
+            --burgundy: #800020;
+            --beige: #F5F5DC;
+            --charcoal: #36454F;
+            --gold: #FFD700;
+        }
+        .book-animation-container {
+            text-align: center;
+            margin: 4rem 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--beige);
+            color: var(--charcoal);
+        }
+        header {
+            background-color: var(--burgundy);
+            color: var(--beige);
+            padding: 1rem;
+            text-align: center;
+        }
+        .hero {
+            background-image: url('books-background.jpg');
+            background-size: cover;
+            color: var(--beige);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Button Container */
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns button to the right */
+    align-items: center; /* Vertically centers the button */
+    height: 100px; /* Adjust this based on your row height */
+}
+
+.get-started {
+    background-color: var(--gold);
+    color: var(--charcoal);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.get-started:hover {
+    background-color: #FFE55C;
+}
+
+
+.cta-button {
+    background-color: var(--gold);
+    color: var(--charcoal);
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+    border: none;
+    margin: 4rem auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+        .cta-button:hover {
+            background-color: #FFE55C;
+        }
+        .introduction {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 2rem;
+            background-color: var(--beige);
+        }
+        .intro-text {
+            flex: 1;
+            padding-right: 2rem;
+        }
+        .intro-text h2 {
+            font-size: 3rem;
+            color: var(--burgundy);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }   
+        .intro-image {
+            flex: 1;
+            text-align: center;
+        }
+        .intro-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .book-animation {
+            width: 300px;
+            height: 200px;
+            margin: 4rem auto;
+            perspective: 1000px;
+            position: relative;
+        }
+        .book-page {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: pageFlip 5s infinite linear;
+        }
+        .book-page::before,
+        .book-page::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: var(--beige);
+            border: 2px solid var(--burgundy);
+            backface-visibility: hidden;
+        }
+        .book-page::after {
+            transform: rotateY(180deg);
+        }
+        @keyframes pageFlip {
+            0% { transform: rotateY(0deg); }
+            50% { transform: rotateY(-180deg); }
+            100% { transform: rotateY(-360deg); }
+        }
+        .site-name {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--burgundy);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .site-name span {
+            display: inline-block;
+        }
+        .site-name .word2 {
+            color: var(--gold);
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 2rem;
+            margin-top: 2rem;
+            background-color: var(--charcoal);
+            color: var(--beige);
+        }
+        .feature {
+            flex-basis: 30%;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .feature img {
+            width: 100px;
+            height: 100px;
+        }
+        footer {
+            background-color: var(--burgundy);
+            color: var(--beige);
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+</head>
+<body>
+    <header>
+        <h1>BookHive</h1>
+        <p>Your University Resource Hub</p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to BookHive</h1>
+            <p>Empowering students with books, mentorship, and resources</p>
+        </section>
+
+        <section class="introduction">
+            <div class="intro-text">
+                <h2>Introduction</h2>
+                <p>BookHive is a revolutionary platform designed to enhance the university experience for students. Our integrated ecosystem combines book rentals, mentorship programs, study clubs, and academic resources to create a comprehensive learning environment. Whether you're looking for textbooks, seeking guidance from experienced peers, or preparing for exams, BookHive has you covered. We're committed to making education more accessible, collaborative, and engaging for students across all disciplines.</p>
+            </div>
+            <div class="intro-image">
+                <img src="book_landing.png" alt="Stack of books with a digital tablet">
+            </div>
+        </section>
+
+        <div class="book-animation-container"></div>
+            <div class="book-animation">
+                <div class="site-name">
+                    <span class="word1">BOOK</span>
+                    <span class="word2">HIVE</span>
+                </div>
+                <div class="book-page"></div>
+            </div>
+        </div>
+
+        <!-- Replaced the old "Get Started" button with this container -->
+        <div class="button-container">
+          <button class="get-started" onclick="window.location.href='index.html'">Get Started</button>
+        </div>
+
+        <section class="features">
+            <div class="feature">
+                <img src="book_icon.png" alt="Book icon">
+                <h2>Book Rentals</h2>
+                <p>Access a vast library of textbooks and novels. Rent easily and have them delivered to your doorstep.</p>
+            </div>
+            <div class="feature">
+                <img src="help.png" alt="Mentor icon">
+                <h2>Mentorship</h2>
+                <p>Connect with Bhaiya and Didi mentors for guidance on academics and university life.</p>
+            </div>
+            <div class="feature">
+                <img src="community.png" alt="Community icon">
+                <h2>Study Clubs</h2>
+                <p>Join subject-specific study groups to collaborate and learn with peers.</p>
+            </div>
+            <div class="feature">
+                <img src="blog.png" alt="Blog icon">
+                <h2>Student Blogs</h2>
+                <p>Read and share experiences, tips, and insights from fellow students.</p>
+            </div>
+            <div class="feature">
+                <img src="pyqs.png" alt="Exam icon">
+                <h2>PYQs</h2>
+                <p>Access a comprehensive database of past year questions for exam preparation.</p>
+            </div>
+            <div class="feature">
+                <img src="mobileapp.png" alt="Mobile icon">
+                <h2>Mobile App</h2>
+                <p>Take BookHive with you everywhere. Available on Google Play.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BookHive. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

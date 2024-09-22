@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs - Bennett University</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Books<span>RENTAL</span></h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button><img src="search-icon.png" alt="Search"></button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Virtual Walkthrough</a></li>
+                <li><a href="#">Genres</a></li>
+                <li><a href="#">Store Locator</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="clubs.html">Clubs</a></li> <!-- New link to Clubs page -->
+            </ul>
+            <div class="app-buttons">
+                <img src="google-play.png" alt="Google Play">
+                <!-- <img src="app-store.png" alt="App Store"> -->
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="student-directory" class="directory-section">
+            <h2>Student Directory and Clubs</h2>
+            
+            <div class="directory">
+                <h3>Student Organizations and Clubs</h3>
+                <ul class="club-list">
+                    <li>
+                        <h4>Book Club</h4>
+                        <p>Description: A club for book lovers to discuss and share their favorite books.</p>
+                        <p>Contact: <a href="mailto:bookclub@example.com">bookclub@example.com</a></p>
+                        <p>Upcoming Event: <a href="#">Monthly Book Discussion</a></p>
+                    </li>
+                    <li>
+                        <h4>Tech Innovators</h4>
+                        <p>Description: A club focused on technology and innovation with regular workshops and hackathons.</p>
+                        <p>Contact: <a href="mailto:techinnovators@example.com">techinnovators@example.com</a></p>
+                        <p>Upcoming Event: <a href="#">Annual Tech Symposium</a></p>
+                    </li>
+                    <!-- Add more clubs here -->
+                </ul>
+            </div>
+
+            <div class="club-registration">
+                <h3>Register a New Club</h3>
+                <form action="register_club_success.html" method="POST">
+                    <label for="club-name">Club Name</label>
+                    <input type="text" id="club-name" name="club_name" required>
+
+                    <label for="club-description">Description</label>
+                    <textarea id="club-description" name="club_description" rows="4" required></textarea>
+
+                    <label for="contact-email">Contact Email</label>
+                    <input type="email" id="contact-email" name="contact_email" required>
+
+                    <label for="event-url">Upcoming Event URL</label>
+                    <input type="url" id="event-url" name="event_url">
+
+                    <button type="submit" class="cta-btn">Register Club</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

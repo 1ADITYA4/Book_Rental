@@ -1,0 +1,112 @@
+/* Color variables */
+:root {
+    --burgundy: #800020;
+    --beige: #F5F5DC;
+    --charcoal: #36454F;
+    --gold: #FFD700;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--beige);
+    color: var(--charcoal);
+}
+
+header {
+    background-color: var(--burgundy);
+    color: var(--beige);
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: center;
+}
+
+header .navbar a {
+    color: var(--beige);
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+header .navbar a:hover {
+    background-color: var(--charcoal);
+    border-radius: 4px;
+}
+
+/* Styling for the main PYQs section */
+.pyqs-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.pyqs-section h2 {
+    font-size: 32px;
+    color: var(--burgundy);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Flexbox layout for courses */
+.pyqs-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Styling for each course block */
+.course {
+    width: 30%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.course:hover {
+    transform: scale(1.05);
+}
+
+.course h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--burgundy);
+}
+
+.course ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.course ul li {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.course ul li a {
+    text-decoration: none;
+    color: var(--charcoal);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.course ul li a:hover {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+    .course {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

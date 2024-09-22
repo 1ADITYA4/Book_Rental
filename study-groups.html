@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Groups - BOOKHIVE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <!-- Navigation content (same as index.html) -->
+        </nav>
+    </header>
+
+    <main>
+        <section class="study-groups-section">
+            <h1>BOOKHIVE Study Groups</h1>
+            <p>Join or create study groups to collaborate with fellow learners.</p>
+            
+            <div class="study-group-options">
+                <div class="join-group">
+                    <h2>Join a Study Group</h2>
+                    <ul class="group-list">
+                        <li>
+                            <h3>Computer Science Fundamentals</h3>
+                            <p>Members: 15 | Next meeting: Tuesday, 7 PM</p>
+                            <button class="join-btn">Join Group</button>
+                        </li>
+                        <li>
+                            <h3>Advanced Mathematics</h3>
+                            <p>Members: 8 | Next meeting: Wednesday, 6 PM</p>
+                            <button class="join-btn">Join Group</button>
+                        </li>
+                        <!-- Add more study groups -->
+                    </ul>
+                </div>
+                <div class="create-group">
+                    <h2>Create a Study Group</h2>
+                    <form class="create-group-form">
+                        <label for="group-name">Group Name:</label>
+                        <input type="text" id="group-name" name="group-name" required>
+
+                        <label for="group-subject">Subject:</label>
+                        <input type="text" id="group-subject" name="group-subject" required>
+
+                        <label for="group-description">Description:</label>
+                        <textarea id="group-description" name="group-description" rows="4" required></textarea>
+
+                        <button type="submit" class="create-btn">Create Group</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content (same as index.html) -->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

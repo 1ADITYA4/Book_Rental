@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Bhaiya</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="booking-container">
+        <div class="booking-form">
+            <h2>Book a Session with Bhaiya</h2>
+            <form action="appointment_success.html" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Preferred Time</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="topic">What would you like to discuss?</label>
+                <textarea id="topic" name="topic" rows="4" required></textarea>
+
+                <button type="submit" class="cta-btn">Book Appointment</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
